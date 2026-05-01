@@ -21,7 +21,7 @@ La clínica administra su operación con hojas de cálculo y notas en papel, lo 
 
 - [x] Fase 1. Análisis del problema
 - [x] Fase 2. Modelado conceptual (Diagrama ER)
-- [ ] Fase 3. Normalización (3FN)
+- [x] Fase 3. Normalización (3FN)
 - [ ] Fase 4. Implementación en SQL
 - [ ] Fase 5. Procedimientos almacenados, funciones y triggers
 - [ ] Fase 6. Álgebra relacional y cálculo relacional
