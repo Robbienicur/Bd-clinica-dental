@@ -13,8 +13,16 @@ La clínica administra su operación con hojas de cálculo y notas en papel, lo 
 ├── README.md
 ├── Fase1/
 │   └── analisis.md
-└── Fase2/
-    └── diagrama.md
+├── Fase2/
+│   └── diagrama.md
+├── Fase3/
+│   └── normalizacion.md
+├── Fase4/
+│   └── script.sql
+├── Fase5/
+│   └── logica_negocio.sql
+└── Fase6/
+    └── algebra_calculo.md
 ```
 
 ### Avance por fases
@@ -24,7 +32,7 @@ La clínica administra su operación con hojas de cálculo y notas en papel, lo 
 - [x] Fase 3. Normalización (3FN)
 - [x] Fase 4. Implementación en SQL
 - [x] Fase 5. Procedimientos almacenados, funciones y triggers
-- [ ] Fase 6. Álgebra relacional y cálculo relacional
+- [x] Fase 6. Álgebra relacional y cálculo relacional
 
 ### Autor
 
