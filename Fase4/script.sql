@@ -14,8 +14,7 @@ CREATE TABLE Paciente (
     fecha_nacimiento DATE NOT NULL,
     telefono VARCHAR(20),
     correo VARCHAR(100) UNIQUE,
-    direccion VARCHAR(255),
-    CONSTRAINT chk_paciente_nacimiento CHECK (fecha_nacimiento <= CURRENT_DATE)
+    direccion VARCHAR(255)
 );
 
 CREATE TABLE Dentista (

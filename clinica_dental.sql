@@ -15,8 +15,7 @@ CREATE TABLE Paciente (
     fecha_nacimiento DATE NOT NULL,
     telefono VARCHAR(20),
     correo VARCHAR(100) UNIQUE,
-    direccion VARCHAR(255),
-    CONSTRAINT chk_paciente_nacimiento CHECK (fecha_nacimiento <= CURRENT_DATE)
+    direccion VARCHAR(255)
 );
 
 CREATE TABLE Dentista (
@@ -256,9 +255,7 @@ BEFORE INSERT ON Cita_Tratamiento
 FOR EACH ROW
 BEGIN
     IF NEW.costo_aplicado IS NULL OR NEW.costo_aplicado = 0 THEN
-        SELECT costo_base INTO NEW.costo_aplicado
-        FROM Tratamiento
-        WHERE id_tratamiento = NEW.id_tratamiento;
+        SET NEW.costo_aplicado = (SELECT costo_base FROM Tratamiento WHERE id_tratamiento = NEW.id_tratamiento);
     END IF;
 END //
 DELIMITER ;

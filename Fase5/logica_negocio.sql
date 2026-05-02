@@ -92,9 +92,7 @@ BEFORE INSERT ON Cita_Tratamiento
 FOR EACH ROW
 BEGIN
     IF NEW.costo_aplicado IS NULL OR NEW.costo_aplicado = 0 THEN
-        SELECT costo_base INTO NEW.costo_aplicado
-        FROM Tratamiento
-        WHERE id_tratamiento = NEW.id_tratamiento;
+        SET NEW.costo_aplicado = (SELECT costo_base FROM Tratamiento WHERE id_tratamiento = NEW.id_tratamiento);
     END IF;
 END //
 DELIMITER ;
